@@ -1,0 +1,122 @@
+/* ============================================================
+   GLOBAL FULL-PAGE EMAIL MOTION
+   ============================================================ */
+
+.floating-email-layer {
+  position: fixed;
+  inset: 0;
+
+  /* Email stays below Navbar */
+  z-index: 10;
+
+  pointer-events: none;
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   SINGLE EMAIL
+   ============================================================ */
+
+.floating-email {
+  position: absolute;
+
+  color: #ff0000;
+
+  font-size: clamp(13px, 1.1vw, 17px);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  white-space: nowrap;
+
+  opacity: 0.75;
+
+  user-select: none;
+  pointer-events: none;
+
+  text-shadow:
+    0 0 18px rgba(255, 0, 0, 0.18);
+
+  will-change: transform;
+}
+
+
+/* ============================================================
+   SINGLE MOTION PATH
+   ============================================================ */
+
+.floating-email-one {
+  top: 48%;
+  left: -30%;
+
+  animation:
+    email-move-one
+    24s
+    linear
+    infinite;
+}
+
+
+/* ============================================================
+   MOTION
+   ============================================================ */
+
+@keyframes email-move-one {
+  0% {
+    transform:
+      translate3d(-10vw, 0, 0)
+      rotate(-3deg);
+  }
+
+  25% {
+    transform:
+      translate3d(30vw, 5vh, 0)
+      rotate(2deg);
+  }
+
+  50% {
+    transform:
+      translate3d(65vw, -4vh, 0)
+      rotate(-2deg);
+  }
+
+  75% {
+    transform:
+      translate3d(100vw, 4vh, 0)
+      rotate(3deg);
+  }
+
+  100% {
+    transform:
+      translate3d(140vw, -2vh, 0)
+      rotate(-2deg);
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .floating-email {
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    opacity: 0.70;
+  }
+
+  .floating-email-one {
+    animation-duration: 20s;
+  }
+}
+
+
+/* ============================================================
+   REDUCE MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-email {
+    animation: none !important;
+  }
+}
