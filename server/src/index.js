@@ -25,8 +25,10 @@ const app = express()
 // GLOBAL MIDDLEWARE
 // ============================================================
 
+// CORS
 app.use(cors())
 
+// JSON body parser
 app.use(express.json())
 
 
@@ -82,21 +84,28 @@ app.use(errorHandler)
 
 async function startServer() {
   try {
+    // Connect MongoDB first
     await connectDatabase()
 
+    // Render provides PORT automatically.
+    // For local development, fallback to serverConfig.port.
+    const PORT = process.env.PORT || serverConfig.port
+
+    // Listen on 0.0.0.0 so Render can access the server.
     app.listen(
-      serverConfig.port,
+      PORT,
+      '0.0.0.0',
       () => {
         console.log(
-          `🎉 Friendship Vault API running on http://localhost:${serverConfig.port}`
+          `🎉 Friendship Vault API running on port ${PORT}`
         )
 
         console.log(
-          `📍 Health check: http://localhost:${serverConfig.port}/api/health`
+          `📍 Health check: /api/health`
         )
 
         console.log(
-          `🔔 Notifications API: http://localhost:${serverConfig.port}/api/notifications`
+          `🔔 Notifications API: /api/notifications`
         )
       }
     )
@@ -111,5 +120,9 @@ async function startServer() {
   }
 }
 
+
+// ============================================================
+// RUN SERVER
+// ============================================================
 
 startServer()
