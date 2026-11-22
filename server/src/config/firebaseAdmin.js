@@ -1,5 +1,5 @@
-import { cert, getApps, initializeApp } from 'firebase-admin/app'
 
+import { cert, getApps, initializeApp } from 'firebase-admin/app';
 
 // ============================================================
 // FIREBASE ADMIN
@@ -19,7 +19,6 @@ const firebaseAdmin =
           ),
         }),
       })
-    : getApps()[0]
+    : getApps()[0];
 
-
-export { firebaseAdmin }
+export { firebaseAdmin };

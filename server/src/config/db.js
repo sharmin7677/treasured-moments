@@ -42,7 +42,7 @@ export async function connectDatabase() {
     await db.command({ ping: 1 });
 
     console.log('MongoDB connected successfully');
-    console.log(`Database: ${db.databaseName}`);
+  console.log(`Database: ${db.databaseName}`);
     return { client, db };
   } catch (error) {
     // Reset failed connection
