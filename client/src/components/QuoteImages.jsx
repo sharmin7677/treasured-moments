@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Swal from 'sweetalert2'
 
-const API_URL = 'http://localhost:5000'
+const API_URL = 'https://treasured-moments.vercel.app'
 
 // ============================================================
 // QUOTE IMAGES

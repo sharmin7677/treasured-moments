@@ -5,7 +5,7 @@ import { getIdToken } from 'firebase/auth'
 
 import { useAuth } from '../contexts/AuthContext.jsx'
 
-const API_URL = 'http://localhost:5000'
+const API_URL = 'https://treasured-moments.vercel.app'
 
 function Photos() {
   const { user } = useAuth()

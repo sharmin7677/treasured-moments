@@ -15,7 +15,7 @@ import {
 
 const AuthContext = createContext(null)
 
-const API_URL = 'http://localhost:5000'
+const API_URL = 'https://treasured-moments.vercel.app'
 
 // ============================================================
 // SYNC USER WITH BACKEND

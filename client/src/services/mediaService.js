@@ -4,7 +4,7 @@ import { getIdToken } from 'firebase/auth'
 // API CONFIG
 // ============================================================
 
-const API_URL = 'http://localhost:5000'
+const API_URL = 'https://treasured-moments.vercel.app'
 
 // ============================================================
 // GET AUTH TOKEN

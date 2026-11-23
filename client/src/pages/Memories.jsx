@@ -66,7 +66,7 @@ function Memories() {
 
         const response =
           await fetch(
-            `http://localhost:5000/api/access/status/${encodeURIComponent(
+            `https://treasured-moments.vercel.app/api/access/status/${encodeURIComponent(
               user.uid
             )}`
           )

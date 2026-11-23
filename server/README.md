@@ -37,13 +37,13 @@ npm run dev
 npm start
 ```
 
-The server will start on `http://localhost:5000` (or your configured PORT).
+The server will start on `https://treasured-moments.vercel.app` (or your configured PORT).
 
 ### Health Check
 
 Verify the server is running:
 ```bash
-curl http://localhost:5000/api/health
+curl https://treasured-moments.vercel.app/api/health
 ```
 
 Expected response:

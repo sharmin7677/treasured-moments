@@ -14,7 +14,7 @@ const ADMIN_EMAIL = 'orthi7677@gmail.com'
 // BACKEND API
 // ============================================================
 
-const API_BASE_URL = 'http://localhost:5000/api'
+const API_BASE_URL = 'https://treasured-moments.vercel.app/api'
 
 // ============================================================
 // NAVBAR

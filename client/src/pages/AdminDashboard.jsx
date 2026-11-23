@@ -14,7 +14,7 @@ import { useAuth } from '../contexts/AuthContext.jsx'
 // API
 // ============================================================
 
-const API_URL = 'http://localhost:5000'
+const API_URL = 'https://treasured-moments.vercel.app'
 
 // ============================================================
 // FILE SIZE LIMITS
